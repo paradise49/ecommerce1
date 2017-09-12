@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package com.ecommerce.helloworld5.controller;
-
+import com.ecommerce.helloworld5.dao.ProductDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -35,7 +35,8 @@ public class AdminController extends HttpServlet {
             rd.forward(request,response);
         }
          else if(request.getRequestURI().equals(contextPath+"/admin/product")){
-              RequestDispatcher rd=request.getRequestDispatcher("/admin-product.jsp");
+             request.setAttribute("productvalue", ProductDao.select());
+              RequestDispatcher rd=request.getRequestDispatcher("/admin-product.jsp");  //if there is two url then add slash
             rd.forward(request,response);
          }
     }

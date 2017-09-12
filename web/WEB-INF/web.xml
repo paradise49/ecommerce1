@@ -12,6 +12,10 @@
         <servlet-name>AdminController2</servlet-name>
         <servlet-class>com.ecommerce.helloworld5.controller.AdminController2</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ProductController</servlet-name>
+        <servlet-class>com.ecommerce.helloworld5.controller.ProductController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Personal_Info</servlet-name>
         <url-pattern>/PersonalInformation</url-pattern>
@@ -24,6 +28,10 @@
     <servlet-mapping>
         <servlet-name>AdminController2</servlet-name>
         <url-pattern>/AdminController2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProductController</servlet-name>
+        <url-pattern>/ProductController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
